@@ -733,11 +733,11 @@ livenessProbe:
 
 ## 변경된 소스코드
 - Gift 서비스에 Gift.java에 내용 추가
-![gift](https://user-images.githubusercontent.com/64522956/93405568-48fe6280-f8c8-11ea-8ecd-1cc5d689625c.png)
+![gi](https://user-images.githubusercontent.com/64522956/93406981-02ab0280-f8cc-11ea-85d8-c69c5ff599cb.png)
 - Gift 서비스에 Used.java 새로 생성
-![used](https://user-images.githubusercontent.com/64522956/93405832-0c7f3680-f8c9-11ea-9d5b-fdde2dce2e08.png)
+![us](https://user-images.githubusercontent.com/64522956/93406906-dbeccc00-f8cb-11ea-841b-354a8d177491.png)
 - Payment 서비스 신규 생성(이벤트 처리를 위한 PolicyHandler.java)
-![Account](https://user-images.githubusercontent.com/64522956/93406049-ae068800-f8c9-11ea-8871-ca8ae5160248.png)
+![po](https://user-images.githubusercontent.com/64522956/93406865-bc55a380-f8cb-11ea-869c-ed36e8f262df.png)
 
 ## EKS 배포 확인 ($ kubectl get all -n game)
 
@@ -768,7 +768,4 @@ livenessProbe:
 ## Gateway, VirtualService, DestinationRule 설정
 
 <img width="590" alt="스크린샷 2020-09-16 오후 6 23 04" src="https://user-images.githubusercontent.com/64522956/93318451-b0290200-f849-11ea-85d9-24fded664e26.png">
-
-kiali 확인
-
 <img width="1766" alt="스크린샷 2020-09-16 오후 6 25 55" src="https://user-images.githubusercontent.com/64522956/93318809-16158980-f84a-11ea-82b1-66bc0348dc5b.png">
