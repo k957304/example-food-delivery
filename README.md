@@ -727,14 +727,19 @@ livenessProbe:
 
 ## 개인 Project
 
-gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
+- gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
 ![personal](https://user-images.githubusercontent.com/64522956/93314498-cb454300-f844-11ea-8a74-0def3e22474b.png)
 
 ## 변경된 소스코드
-Gift 서비스에 Gift.java에 내용 추가
-
+- Gift 서비스에 Gift.java에 내용 추가
 ![gift](https://user-images.githubusercontent.com/64522956/93405568-48fe6280-f8c8-11ea-8ecd-1cc5d689625c.png)
+
+- Gift 서비스에 Used.java 새로 생성
+![used](https://user-images.githubusercontent.com/64522956/93405832-0c7f3680-f8c9-11ea-9d5b-fdde2dce2e08.png)
+
+- Payment 서비스 신규 생성(이벤트 처리를 위한 PolicyHandler.java)
+![Account](https://user-images.githubusercontent.com/64522956/93406049-ae068800-f8c9-11ea-8871-ca8ae5160248.png)
 
 ## EKS 배포 확인 ($ kubectl get all -n game)
 
@@ -754,7 +759,8 @@ Gift 서비스에 Gift.java에 내용 추가
 
 ## CQRS (2)
 
-Database 조회 업무만을 수행하기 위한 mypage 개발
+- Database 조회 업무만을 수행하기 위한 mypage 개발
+![CQRS](https://user-images.githubusercontent.com/64522956/93406253-28cfa300-f8ca-11ea-9ee1-aa767e9d8f4f.png)
 <img width="932" alt="스크린샷 2020-09-16 오후 6 17 44" src="https://user-images.githubusercontent.com/64522956/93317884-f16ce200-f848-11ea-889b-d9a26c5e0c50.png">
 
 ## ConfigMap, EFS 수정
