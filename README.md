@@ -729,7 +729,7 @@ livenessProbe:
 
 - gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
-![model](https://user-images.githubusercontent.com/64522956/93412346-ef059900-f8d7-11ea-8ef1-a8c13e54098f.png)
+![모델2](https://user-images.githubusercontent.com/64522956/93427848-78799300-f8f9-11ea-8bb4-9b0513f16032.png)
 
 - Gift 서비스 PolicyHandler 내용 추가
 ![saga](https://user-images.githubusercontent.com/64522956/93423537-29c7fb00-f8f1-11ea-8ea0-156201f66b90.png)
