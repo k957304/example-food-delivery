@@ -771,6 +771,7 @@ livenessProbe:
 ## 오토스케일 아웃 (8)
 - payment에 HPA 추가
 ![hpa](https://user-images.githubusercontent.com/64522956/93413100-74d61400-f8d9-11ea-8e06-f60251900f4b.png)
+![hpa_2](https://user-images.githubusercontent.com/64522956/93430426-9ea13200-f8fd-11ea-84b3-0ba785a75ce5.png)
 
 ## 무정지 재배포, Readiness probe 설정 (9)
 - readinessProbe 설정
