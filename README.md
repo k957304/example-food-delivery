@@ -725,7 +725,7 @@ livenessProbe:
 파일이 없으니 Liveness 체크에 실패를 했고, pod를 재기동 시킵니다.
 ![image](https://user-images.githubusercontent.com/24929411/93284147-ff9d0d00-f80c-11ea-8371-aa8684c661ef.png)
 
-## 개인 Project
+## 개인 Project // SAGA(1), 동기식 호출 과 Fallback 처리 (4)
 
 - gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
@@ -741,17 +741,32 @@ livenessProbe:
 - Payment 서비스 신규 생성(이벤트 처리를 위한 PolicyHandler.java)
 ![po](https://user-images.githubusercontent.com/64522956/93406865-bc55a380-f8cb-11ea-869c-ed36e8f262df.png)
 
+- Gift 서비스에 동기 호출 및 Fallback 처리
+![fall](https://user-images.githubusercontent.com/64522956/93413714-d77bdf80-f8da-11ea-948f-e04bf4ad8a5a.png)
+![fallback](https://user-images.githubusercontent.com/64522956/93413804-03976080-f8db-11ea-9548-d5da9d36bfc7.png)
+
 ## EKS 배포 확인 ($ kubectl get all -n game)
 <img width="1447" alt="스크린샷 2020-09-16 오후 5 39 41" src="https://user-images.githubusercontent.com/64522956/93316473-33952400-f847-11ea-9a03-79e0dc54d005.png">
 
 ## CQRS (2)
 ![cq](https://user-images.githubusercontent.com/64522956/93412741-b6b28a80-f8d8-11ea-8a4e-ae829a335d64.png)
 
-
 ## Gateway (5)
 ![vs](https://user-images.githubusercontent.com/64522956/93407257-a98f9e80-f8cc-11ea-9ef6-052ca3fa354e.png)
 
-## ConfigMap, EFS 수정
+## CI/CD 설정 (6)
+- Codebuild에 kong-payment 추가
+![codebuild](https://user-images.githubusercontent.com/64522956/93413316-f4fc7980-f8d9-11ea-92ad-fc23162c7e27.png)
+
+## 서킷 브레이킹 (7)
+- payment에 DestinationRule 추가
+![circuit](https://user-images.githubusercontent.com/64522956/93413466-4c024e80-f8da-11ea-8a32-f590cce10af3.png)
+
+## 오토스케일 아웃 (8)
+- payment에 HPA 추가
+![hpa](https://user-images.githubusercontent.com/64522956/93413100-74d61400-f8d9-11ea-8e06-f60251900f4b.png)
+
+## ConfigMap, EFS
 <img width="773" alt="스크린샷 2020-09-16 오후 6 20 12" src="https://user-images.githubusercontent.com/64522956/93318214-650eef00-f849-11ea-956e-150cb7f3093a.png">
 
 ## Gateway, VirtualService
