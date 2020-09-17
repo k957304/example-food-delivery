@@ -730,9 +730,10 @@ livenessProbe:
 - gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
 ![model](https://user-images.githubusercontent.com/64522956/93412346-ef059900-f8d7-11ea-8ef1-a8c13e54098f.png)
+
+- Gift 서비스 PolicyHandler 내용 추가
 ![saga](https://user-images.githubusercontent.com/64522956/93423537-29c7fb00-f8f1-11ea-8ea0-156201f66b90.png)
 
-## 변경된 소스코드
 - Gift 서비스에 Gift.java에 내용 추가
 ![gi](https://user-images.githubusercontent.com/64522956/93406981-02ab0280-f8cc-11ea-85d8-c69c5ff599cb.png)
 
@@ -751,6 +752,8 @@ livenessProbe:
 
 ## CQRS (2)
 ![cq](https://user-images.githubusercontent.com/64522956/93412741-b6b28a80-f8d8-11ea-8a4e-ae829a335d64.png)
+![cq1](https://user-images.githubusercontent.com/64522956/93424116-5af4fb00-f8f2-11ea-95da-79f3710c9efa.png)
+![cq2](https://user-images.githubusercontent.com/64522956/93424161-6a744400-f8f2-11ea-9fce-8b3e3df5c149.png)
 
 ## Gateway (5)
 ![vs](https://user-images.githubusercontent.com/64522956/93407257-a98f9e80-f8cc-11ea-9ef6-052ca3fa354e.png)
@@ -767,8 +770,20 @@ livenessProbe:
 - payment에 HPA 추가
 ![hpa](https://user-images.githubusercontent.com/64522956/93413100-74d61400-f8d9-11ea-8e06-f60251900f4b.png)
 
-## ConfigMap, EFS
+## 무정지 재배포, Readiness probe 설정 (9)
+- readinessProbe 설정
+![live](https://user-images.githubusercontent.com/64522956/93424508-1ddd3880-f8f3-11ea-8280-c2b01c513452.png)
+
+## ConfigMap/Persistence Volume (10)
 <img width="773" alt="스크린샷 2020-09-16 오후 6 20 12" src="https://user-images.githubusercontent.com/64522956/93318214-650eef00-f849-11ea-956e-150cb7f3093a.png">
+
+## Polyglot(11)
+- application.yml에 생성한 RDS 설정을 추가
+![pay_appl](https://user-images.githubusercontent.com/64522956/93424749-980dbd00-f8f3-11ea-9b6a-a0f29c3e72e8.png)
+
+## Liveness Probe (12)
+- livenessProbe 설정
+![live](https://user-images.githubusercontent.com/64522956/93424508-1ddd3880-f8f3-11ea-8280-c2b01c513452.png)
 
 ## Gateway, VirtualService
 <img width="590" alt="스크린샷 2020-09-16 오후 6 23 04" src="https://user-images.githubusercontent.com/64522956/93318451-b0290200-f849-11ea-85d9-24fded664e26.png">
