@@ -729,7 +729,7 @@ livenessProbe:
 
 - gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
-![personal](https://user-images.githubusercontent.com/64522956/93314498-cb454300-f844-11ea-8a74-0def3e22474b.png)
+![model](https://user-images.githubusercontent.com/64522956/93412346-ef059900-f8d7-11ea-8ef1-a8c13e54098f.png)
 
 ## 변경된 소스코드
 - Gift 서비스에 Gift.java에 내용 추가
@@ -742,34 +742,18 @@ livenessProbe:
 ![po](https://user-images.githubusercontent.com/64522956/93406865-bc55a380-f8cb-11ea-869c-ed36e8f262df.png)
 
 ## EKS 배포 확인 ($ kubectl get all -n game)
-
 <img width="1447" alt="스크린샷 2020-09-16 오후 5 39 41" src="https://user-images.githubusercontent.com/64522956/93316473-33952400-f847-11ea-9a03-79e0dc54d005.png">
 
-## Saga (1)
-
-미션  달성 후 Database에 바로 commit 후 미션을 달성했다는 정보를 reward 서비스에 이벤트를 송출한다(Publish)
-
-데이터 생성 흐름(1) : Mission 달성 -> Reward 지급 -> Wallet에 생성
-
-<img width="1054" alt="스크린샷 2020-09-16 오후 6 04 06" src="https://user-images.githubusercontent.com/64522956/93316363-0e081a80-f847-11ea-891c-dcfb738f00e6.png">
-
-데이터 생성 흐름(2) : Wallet에서 Reward 교환 -> Gift에 생성(교환 내역) -> Payment에 생성(정산 데이터)
-
-<img width="1019" alt="스크린샷 2020-09-16 오후 6 15 52" src="https://user-images.githubusercontent.com/64522956/93317659-b4a0eb00-f848-11ea-864a-84925c7f07ce.png">
-
 ## CQRS (2)
+![cq](https://user-images.githubusercontent.com/64522956/93412741-b6b28a80-f8d8-11ea-8a4e-ae829a335d64.png)
 
-- Database 조회 업무만을 수행하기 위한 mypage 개발
-![CQRS](https://user-images.githubusercontent.com/64522956/93406253-28cfa300-f8ca-11ea-9ee1-aa767e9d8f4f.png)
 
 ## Gateway (5)
 ![vs](https://user-images.githubusercontent.com/64522956/93407257-a98f9e80-f8cc-11ea-9ef6-052ca3fa354e.png)
 
 ## ConfigMap, EFS 수정
-
 <img width="773" alt="스크린샷 2020-09-16 오후 6 20 12" src="https://user-images.githubusercontent.com/64522956/93318214-650eef00-f849-11ea-956e-150cb7f3093a.png">
 
-## Gateway, VirtualService, DestinationRule 설정
-
+## Gateway, VirtualService
 <img width="590" alt="스크린샷 2020-09-16 오후 6 23 04" src="https://user-images.githubusercontent.com/64522956/93318451-b0290200-f849-11ea-85d9-24fded664e26.png">
-<img width="1766" alt="스크린샷 2020-09-16 오후 6 25 55" src="https://user-images.githubusercontent.com/64522956/93318809-16158980-f84a-11ea-82b1-66bc0348dc5b.png">
+
