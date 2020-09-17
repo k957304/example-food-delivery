@@ -757,6 +757,8 @@ livenessProbe:
 
 ## Gateway (5)
 ![vs](https://user-images.githubusercontent.com/64522956/93407257-a98f9e80-f8cc-11ea-9ef6-052ca3fa354e.png)
+<img width="590" alt="스크린샷 2020-09-16 오후 6 23 04" src="https://user-images.githubusercontent.com/64522956/93318451-b0290200-f849-11ea-85d9-24fded664e26.png">
+
 
 ## CI/CD 설정 (6)
 - Codebuild에 kong-payment 추가
@@ -784,7 +786,3 @@ livenessProbe:
 ## Liveness Probe (12)
 - livenessProbe 설정
 ![live](https://user-images.githubusercontent.com/64522956/93424508-1ddd3880-f8f3-11ea-8280-c2b01c513452.png)
-
-## Gateway, VirtualService
-<img width="590" alt="스크린샷 2020-09-16 오후 6 23 04" src="https://user-images.githubusercontent.com/64522956/93318451-b0290200-f849-11ea-85d9-24fded664e26.png">
-
