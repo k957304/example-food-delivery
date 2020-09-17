@@ -730,6 +730,7 @@ livenessProbe:
 - gift를 교환을 하게 되어, gift table이 수정이 되면, 정산을 위한 새로운 App.인 payment 서비스로 이벤트를 전달한다.
 
 ![model](https://user-images.githubusercontent.com/64522956/93412346-ef059900-f8d7-11ea-8ef1-a8c13e54098f.png)
+![saga](https://user-images.githubusercontent.com/64522956/93423537-29c7fb00-f8f1-11ea-8ea0-156201f66b90.png)
 
 ## 변경된 소스코드
 - Gift 서비스에 Gift.java에 내용 추가
