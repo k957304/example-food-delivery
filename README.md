@@ -734,10 +734,8 @@ livenessProbe:
 ## 변경된 소스코드
 - Gift 서비스에 Gift.java에 내용 추가
 ![gift](https://user-images.githubusercontent.com/64522956/93405568-48fe6280-f8c8-11ea-8ecd-1cc5d689625c.png)
-
 - Gift 서비스에 Used.java 새로 생성
 ![used](https://user-images.githubusercontent.com/64522956/93405832-0c7f3680-f8c9-11ea-9d5b-fdde2dce2e08.png)
-
 - Payment 서비스 신규 생성(이벤트 처리를 위한 PolicyHandler.java)
 ![Account](https://user-images.githubusercontent.com/64522956/93406049-ae068800-f8c9-11ea-8871-ca8ae5160248.png)
 
