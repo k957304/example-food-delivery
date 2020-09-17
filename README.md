@@ -759,7 +759,9 @@ livenessProbe:
 
 - Database 조회 업무만을 수행하기 위한 mypage 개발
 ![CQRS](https://user-images.githubusercontent.com/64522956/93406253-28cfa300-f8ca-11ea-9ee1-aa767e9d8f4f.png)
-<img width="932" alt="스크린샷 2020-09-16 오후 6 17 44" src="https://user-images.githubusercontent.com/64522956/93317884-f16ce200-f848-11ea-889b-d9a26c5e0c50.png">
+
+## Gateway (5)
+![vs](https://user-images.githubusercontent.com/64522956/93407257-a98f9e80-f8cc-11ea-9ef6-052ca3fa354e.png)
 
 ## ConfigMap, EFS 수정
 
